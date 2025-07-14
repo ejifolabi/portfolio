@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emmanuel Ejifolabi | AI & Signal Processing</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emmanuel Ejifolabi | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
 </head>
 <body>
   <nav>
@@ -22,88 +21,67 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-</nav>
+  </nav>
 
-
-  <header>
-    <div class="container hero">
-      <div class="hero-text">
-        <h2>👋 Hi, I'm Emmanuel</h2>
-        <p>AI, Signal Processing, and Computer Vision Enthusiast.</p>
-      </div>
-      <div class="hero-img">
-        <img src="assets/profile.png" alt="Emmanuel's photo">
-        <img src="assets/illustration.svg" alt="Illustration">
-      </div>
+  <header class="hero container">
+    <div class="hero-text">
+      <h2>Hi, I'm Emmanuel Ejifolabi</h2>
+      <p>AI & Signal Processing Enthusiast | Computer Vision Explorer | Research-Driven Developer</p>
+      <a href="#contact" class="btn">Let's Connect</a>
+    </div>
+    <div class="hero-img">
+      <img src="assets/profile.png" alt="Profile" />
+      <img src="assets/illustration.svg" alt="Illustration" />
     </div>
   </header>
 
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I'm a passionate AI and Signal Processing developer, transforming data into smart, impactful solutions through voice, audio, and visual processing.
-      </p>
-    </div>
+  <section id="about" class="container reveal">
+    <h2>About Me</h2>
+    <p>I’m passionate about AI, Signal Processing, and building real-world solutions that interpret sound, images, and data. I love merging code with research to solve hard problems and help people understand complex systems.</p>
   </section>
 
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="carousel" id="project-carousel"></div>
-    </div>
+  <section id="projects" class="container reveal">
+    <h2>Projects</h2>
+    <div class="carousel" id="project-carousel"></div>
   </section>
 
-  <section id="resume" class="resume">
-    <div class="container">
-      <h2>Resume</h2>
-      <a href="assets/resume.pdf" class="btn" download>📄 Download My Resume</a>
-    </div>
+  <section id="resume" class="container reveal">
+    <h2>Resume</h2>
+    <a href="assets/resume.pdf" class="btn" download>Download My Resume (PDF)</a>
   </section>
 
-  <section id="testimonials" class="testimonials">
-    <div class="container">
-      <h2>Testimonials</h2>
-      <div class="testimonial-container" id="testimonial-slider"></div>
-    </div>
+  <section id="testimonials" class="container reveal">
+    <h2>Testimonials</h2>
+    <div class="testimonial-container" id="testimonial-slider"></div>
   </section>
 
-  <section id="blog" class="blog">
-    <div class="container">
-      <h2>Blog</h2>
-      <div class="blog-grid">
-        <div class="blog-post">
-          <h3>Getting Started with Signal Processing</h3>
-          <p>A beginner’s guide to signals, systems, and practical applications.</p>
-          <a href="#">Read More</a>
-        </div>
-        <div class="blog-post">
-          <h3>AI for Audio and Speech</h3>
-          <p>How artificial intelligence is reshaping voice technologies.</p>
-          <a href="#">Read More</a>
-        </div>
+  <section id="blog" class="container reveal">
+    <h2>Blog</h2>
+    <div class="blog-grid">
+      <div class="blog-post">
+        <h3>Getting Started with Audio AI</h3>
+        <p>How I approached voice classification using open datasets and free tools.</p>
+      </div>
+      <div class="blog-post">
+        <h3>Signal Processing for Real World</h3>
+        <p>How signal processing and AI can solve real problems in health, finance, and communication.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <form action="https://formsubmit.co/ejifolabiemmanueloludare@gmail.com" method="POST">
-        <input type="hidden" name="_next" value="https://ejifolabi.github.io/portfolio/" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
+  <section id="contact" class="container reveal">
+    <h2>Contact Me</h2>
+    <form action="https://formsubmit.co/ejifolabiemmanueloludare@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="hidden" name="_redirect" value="https://ejifolabi.github.io/portfolio/">
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Emmanuel Ejifolabi</p>
-    </div>
+    <p>&copy; 2025 Emmanuel Ejifolabi. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
