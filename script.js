@@ -1,3 +1,5 @@
+// script.js
+
 // Scroll reveal effect
 const revealElements = document.querySelectorAll('.reveal');
 window.addEventListener('scroll', () => {
@@ -10,24 +12,40 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// Load GitHub projects dynamically
-fetch('https://api.github.com/users/ejifolabi/repos?sort=updated')
+// Load pinned GitHub projects dynamically (manual order)
+const pinnedRepos = [
+  "natural-activity",
+  "voice-gender-classification",
+  "file-compressor",
+  "portfolio",
+  "audio-enhancer",
+  "signal-ai-lab"
+];
+
+fetch('https://api.github.com/users/ejifolabi/repos')
   .then(res => res.json())
   .then(data => {
     const carousel = document.getElementById('project-carousel');
-    data.slice(0, 6).forEach(repo => {
-      const card = document.createElement('div');
-      card.className = 'project-card';
-      card.innerHTML = `
-        <h3>${repo.name}</h3>
-        <p>${repo.description || 'No description provided.'}</p>
-        <a href="${repo.html_url}" target="_blank">View on GitHub</a>
-      `;
-      carousel.appendChild(card);
+    const repoMap = {};
+    data.forEach(repo => {
+      repoMap[repo.name] = repo;
+    });
+    pinnedRepos.forEach(name => {
+      const repo = repoMap[name];
+      if (repo) {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        card.innerHTML = `
+          <h3>${repo.name}</h3>
+          <p>${repo.description || 'No description provided.'}</p>
+          <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+        `;
+        carousel.appendChild(card);
+      }
     });
   });
 
-// Testimonials (mockup)
+// Testimonials
 const testimonials = [
   {
     name: "Jane Doe",
@@ -49,7 +67,8 @@ testimonials.forEach(t => {
   `;
   testimonialSlider.appendChild(div);
 });
-// Toggle mobile menu
+
+// Mobile menu toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
