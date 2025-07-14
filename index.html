@@ -52,11 +52,15 @@
     <div class="container">
       <h2>Contact</h2>
       <form action="https://formsubmit.co/ejifolabiemmanueloludare@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send</button>
+      <!-- Redirect back to /portfolio after form submission -->
+      <input type="hidden" name="_next" value="https://ejifolabi.github.io/portfolio/" />
+      
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
       </form>
+
       <p>Email: <a href="mailto:ejifolabiemmanueloludare@gmail.com">ejifolabiemmanueloludare@gmail.com</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/ejifolabi" target="_blank">ejifolabi</a></p>
       <p>GitHub: <a href="https://github.com/ejifolabi" target="_blank">@ejifolabi</a></p>
