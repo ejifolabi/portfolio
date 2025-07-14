@@ -1,75 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emmanuel Ejifolabi | AI & Signal Processing</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav>
+    <div class="container nav">
+      <h1 class="logo">Emmanuel Ejifolabi</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <header>
-    <div class="container">
-      <h1 class="typing">Hi, I'm Emmanuel Oludare Ejifolabi</h1>
-      <p>AI + Signal Processing Enthusiast | Computer Vision Explorer</p>
+    <div class="container hero">
+      <div class="hero-text">
+        <h2>👋 Hi, I'm Emmanuel</h2>
+        <p>AI, Signal Processing, and Computer Vision Enthusiast.</p>
+      </div>
+      <div class="hero-img">
+        <img src="assets/profile.jpg" alt="Emmanuel's photo">
+        <img src="assets/illustration.svg" alt="Illustration">
+      </div>
     </div>
   </header>
 
-  <section class="about reveal">
+  <section id="about" class="about">
     <div class="container">
       <h2>About Me</h2>
       <p>
-        I'm a passionate developer focused on Artificial Intelligence, Signal Processing, and Computer Vision. I love turning complex signals into smart, real-world applications — especially through voice, audio, and visual data.
+        I'm a passionate AI and Signal Processing developer, transforming data into smart, impactful solutions through voice, audio, and visual processing.
       </p>
     </div>
   </section>
 
-  <section class="skills reveal">
+  <section id="projects" class="projects">
     <div class="container">
-      <h2>Skills & Tools</h2>
-      <div class="badges">
-        <span>Python</span>
-        <span>TensorFlow</span>
-        <span>OpenCV</span>
-        <span>Librosa</span>
-        <span>MATLAB</span>
-        <span>Streamlit</span>
-        <span>Scikit-learn</span>
-        <span>Git & GitHub</span>
+      <h2>Projects</h2>
+      <div class="carousel" id="project-carousel"></div>
+    </div>
+  </section>
+
+  <section id="resume" class="resume">
+    <div class="container">
+      <h2>Resume</h2>
+      <a href="assets/resume.pdf" class="btn" download>📄 Download My Resume</a>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <div class="testimonial-container" id="testimonial-slider"></div>
+    </div>
+  </section>
+
+  <section id="blog" class="blog">
+    <div class="container">
+      <h2>Blog</h2>
+      <div class="blog-grid">
+        <div class="blog-post">
+          <h3>Getting Started with Signal Processing</h3>
+          <p>A beginner’s guide to signals, systems, and practical applications.</p>
+          <a href="#">Read More</a>
+        </div>
+        <div class="blog-post">
+          <h3>AI for Audio and Speech</h3>
+          <p>How artificial intelligence is reshaping voice technologies.</p>
+          <a href="#">Read More</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="projects reveal">
-    <div class="container">
-      <h2>My GitHub Projects</h2>
-      <div id="github-projects" class="project-grid"></div>
-    </div>
-  </section>
-
-  <section class="contact reveal">
+  <section id="contact" class="contact">
     <div class="container">
       <h2>Contact</h2>
       <form action="https://formsubmit.co/ejifolabiemmanueloludare@gmail.com" method="POST">
-        <!-- Redirect back to your portfolio page after submission -->
         <input type="hidden" name="_next" value="https://ejifolabi.github.io/portfolio/" />
         <input type="hidden" name="_captcha" value="false" />
-        
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
         <button type="submit">Send</button>
       </form>
-
-      <p>Email: <a href="mailto:ejifolabiemmanueloludare@gmail.com">ejifolabiemmanueloludare@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/ejifolabi" target="_blank">ejifolabi</a></p>
-      <p>GitHub: <a href="https://github.com/ejifolabi" target="_blank">@ejifolabi</a></p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Emmanuel Ejifolabi</p>
+    <div class="container">
+      <p>&copy; 2025 Emmanuel Ejifolabi</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
